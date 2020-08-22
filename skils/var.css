@@ -1,0 +1,51 @@
+:root {
+    --div-color:#643;
+    --bd-height:300px;
+    --box-padding:4px;
+    --my-h:calc(2em + 56px);
+    --div1-color:#146905;
+    --my-color:#109494;
+    }
+    .lor__ {
+        border-bottom: 5px dashed red;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .bloc {
+        width: 100%;
+        /* background-color: blue; */
+        /* background-color: var(--div-color, green); */
+    }
+    .bloc .block__text {
+        color: 0;
+        
+    }
+    .bloc span {
+        display: block;
+        font-size: 45px;
+        width: 300px ;
+        background-color: #5d7e57;
+    
+    }
+    .bloc > p {
+        font-size: medium;
+        color: #267815;
+    }
+    .tro {
+        background-color: var(--div1-color);
+    }
+/** js */
+
+    /* // var styles = getComputedStyle(document.documentElement);
+// var value = styles.getPropertyValue('--div1-color');
+// console.log(value);
+// value = #105;
+var x =383;
+
+// var y ='999';
+
+//! document.documentElement.style.setProperty('--div1-color', 'var(--my-color)');
+document.documentElement.style.setProperty('--div1-color', `#${x}`); */
+

@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    font:1em/1.4em sans-serif;
+    
+}
+a {
+    text-decoration: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* inside */
+.menu a{
+    background: #181010;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #666;
+    /* линии под ссылками */
+    transition: .5s all;
+}
+/* //////////////////////////// */
+/* .menu li:first-child a,
+.menu li .menu_drob li:first-child a
+{
+    border-radius: 3px 3px 0 0;
+} 
+
+.menu li:last-child a,
+.menu li .menu_drob li:last-child a
+{
+    border-radius:0 0 3px 3px;
+    border-bottom: 0;
+}
+
+.menu li .menu_drob li a{
+    border-radius: 0;
+    border: 1px solid #666;
+} */
+/* убирает сверху подчеркивание */
+
+
+/* //////////////////////////////// */
+.side {
+  max-width: 110px;
+}
+.menu a:hover{
+    background: #666;
+    padding: 10px 0 10px 20px;
+    /* выезжание пунтиков при на воде */
+}
+/* 
+всплывающее меню */
+
+.menu_list {
+    position: relative;
+}
+.menu_drob {
+position: absolute;
+width: 100%;
+left: 100%;
+top: -9999em;
+/* убирает под блок далеко вверх */
+opacity: 0;
+transition: 0.5s opacity;
+/* ПЛАВНОЕ ПОЯВЛЕНИЕ */
+/* border-left: 10px solid transparent; */
+/* отступ 10, хз, не имеет цвета */
+}
+/* конвенирует li в ul*/
+.menu_list:hover 
+.menu_drob {
+    opacity: 1;
+    top: 0;
+    
+}
+
+/* иконки для всплывающих меню */
+.menu_list:after {
+content: "";
+position: absolute;
+border: 8px solid;
+border-color: transparent transparent transparent #fff;
+/* создание треугольников */
+top: 0.8em;
+right: 0;
+/* ////// */
+transition: 0.5s;
+/* amnimation */
+}
+/* елемент который создается после after */
+.menu_list:hover::after{
+    transform: scaleX(-1);
+}
+/* обращение именно к этому елементу и разворот его  */

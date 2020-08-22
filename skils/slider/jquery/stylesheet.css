@@ -1,0 +1,180 @@
+  body {
+    /* display: grid; */
+    /* если включить дисплей в любом другом обьекте, не будет работать */
+  }
+  .main {
+    height: 100%;
+    padding: 50px;
+    /* width: 80%; */
+    
+  }
+  /* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+  /* Что бы не вылазила не активная фотка на активную */
+}
+/* Лента слайдов */
+.slick-track{
+  display: flex;
+  align-items: flex-start;
+  /* Включение adaptiveHeight: true 
+  вроде прижмет к верху*/
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{
+
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev{
+  
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next{
+
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{
+
+}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+
+
+
+.slider {
+  min-width: 0;
+  position: relative;
+  padding: 0px 60px;
+  /* отодвнинуть слева и справа кнопки */
+  /* width: 45%; */
+  /* Изменение размеров слайдера */
+}
+/* Активная стрелка стрелка на выбранном слайде  */
+.slider .slick-arrow {
+ position: absolute; 
+ top: 50%;
+ z-index: 10;
+ margin: -30px 0 0 0;
+ /* подняди кнопки почти ровно в центр по высоте фоток */
+ font-size: 0;
+ /* убрать надписи на фотках */
+ width: 30px;
+ height: 31px;
+ /* Размер стрелочек */
+}
+.slider_item {
+  min-width: 0;
+}
+/* Стрелка влево hover */
+.slider .slick-arrow.slick-prev{
+  left: 0;
+  /* прижали к углу */
+  background: url('img/icons8_chevron_left_80px_2.png') 0 0 / 100% no-repeat;
+  /* Размер 100% */
+  border: none;
+  /* убирает рамки */
+}
+/* Стрелка вправо hover*/
+.slider .slick-arrow.slick-next{
+right: 0;
+ /* прижали к углу */
+ background: url('img/icons8_chevron_right_80px_1.png') 0 0 / 100% no-repeat;
+ /* Размер 100% */
+ border: none;
+ /* убирает рамки */
+}
+
+
+
+/* Точки (булиты) */
+.slider .slick-dots{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.slider .slick-dots li{
+list-style: none;
+/* Убрать точки */
+margin: 0 10px;
+/* Отступы от кнопок */
+}
+/* Элемент точки */
+.slick-dots li button{
+  font-size: 0;
+  /* Убрать текст */
+  width: 10px;
+  height: 10px;
+  background-color: rgb(0, 0, 0);
+  /* Размер кнопок */
+  border-radius: 50%;
+  /* Округляем */
+ border: none;
+/* Рамки */
+}
+/* Класс который присваивается активной круглой кнопке переключения */
+.slider .slick-dots li.slick-active button{
+  background-color: transparent;
+  border: 1px solid black;
+  /* Размер границы + хз + цвет */
+}
+/* Если слайдер конечный это класс стрелки которая дошла до конца */
+.slider .slick-arrow.slick-disabled  {
+  opacity: 0.2;
+}
+/* Можно изменять дисплей слайдера
+Если делаем вертикальный слайдер 
+Работает не так коректно как с гориз
+по этому лучше установить размер слайдера 
+по высоте самой большой картинки
+или все картинки одной высоты*/
+/* .slider .slick-track {
+   display: block;
+} */
+
+img {
+  width: 100%;
+  height: 400px;
+  /* border: none; */
+
+}
+/* ////////////////////TWO */
+.slider1 {
+
+}
+.slider_item1 {
+ text-align: center;
+}
+.foto {
+  width: 50%;
+}
+
+.cont .slick-arrow.slick-prev{
+  left: 0;
+  /* прижали к углу */
+  background: url('img/icons8_chevron_left_80px_2.png') 0 0 / 100% no-repeat;
+  /* Размер 100% */
+  border: none;
+  /* убирает рамки */
+}

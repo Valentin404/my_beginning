@@ -1,0 +1,311 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    min-width: 320px;
+    /* position: relative;
+    overflow: hidden;
+    text-align: center; */
+    font-family: 'Kaushan Script', cursive;
+    font-size: 15px;
+   /* размер шрифта */
+   color: #fff;
+   line-height: 1.6;
+   /* строчный отсуп */
+
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.intro {
+    
+    width: 100%;
+    height: 100vh;
+    background: url(img/178553.jpg) center
+    /* по центру картина */
+    no-repeat;
+    /* повтор картины */
+    -webkit-backdrop-size:cover ;
+    background-size: cover;
+    /* оба тега для алаптации фона */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* опуск текста ниже велком... */
+
+}
+.intro_inner {
+width: 100%;
+max-width: 880px ;
+margin: 0 auto;
+color: black;
+margin-top: -230px;
+
+text-align: center;
+/* выовнять все содержимое по центру */
+}
+.intro_title {
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* заглавные буквы */
+  /* text-align: center; */
+  /* расположение текста */
+  line-height: 1;
+  /* высота букв */
+} 
+.intro_title:after {
+   content: "";
+   display: block;
+   width: 600px;
+   height: 3px;
+  /* полоска под текстом */
+   background-color:rgb(0, 0, 0);
+
+   margin: 20px auto 0;
+   /* отступ полоски(20) положение авто */
+
+  
+}
+/* button */
+.but {
+ text-decoration: none;
+ color: black;
+ margin: 0 auto;
+ font-size: 16px;
+
+ font-weight: 700;
+ /* жирнсть текста */
+
+ display: inline-block;
+ vertical-align: top;
+ border: 3px solid #000;
+ /* рамачка вокрух кнопки, цвет, радиус, толщина (3) */
+ padding: 10px 15px;
+ /* высота и ширына отстуав от текста до рамрчки внутри */
+ margin-top: 30px;
+ /* отступ текста */
+
+ transition: background .25s linear, color .25s linear ;
+ /* плавность изменения кнопки, при наводе */
+}
+.but:hover {
+    /* манипуляции при наводе на ссылку, с помощью псевдоелементов */
+    background-color: white;
+    /* цвет между текстом и рамкой */
+    color: #000;
+    /* цвет текста */
+    opacity: .7;
+    /* прозрачность */
+
+}
+
+.header {
+    padding-top: 15px;
+    /* опустить шапку в ник */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* шапка прижимается к верху и стает в нутырь фона */
+
+
+}
+.header_inner {
+    display: flex;
+    justify-content: space-between;
+    /* ссылка и лого займут крайнее позиции на одной строчке */
+    align-items: center;
+    /* выровнять по горизонтали ссылки по отношению к лого */
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+
+}
+
+.logo_a {
+    color: aliceblue;
+    text-decoration: none;
+    /* обычная ссылка */
+    transition: color 0.2s linear;
+    /* изменения цвета при наводе */
+    display: inline-block;
+    vertical-align: top;
+    /* два, шли в строку */
+    margin: 0px 15px;
+    /* Опустить ниже ссылки и растояние между ссылками */
+    position: relative;
+    /* линия выравнивается относительно ссылке */
+}
+
+.logo_a:hover {
+    color: gold;
+    /* цвет на который будет менятся, обязательно + / :hover / in end */   
+}
+.logo_a:after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    display: block;
+ /* размер и тип полоки */
+    background-color: gold;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    /* выравнивается линия относительно ссылке */
+    /* display: none; */
+    /* линия показывается толoкр при наводе */
+    opacity: 0;
+    /* Плавность появления полоски под текстом */
+    transition: opacity .2s linear;
+    /* при наводе через 0.2 с будет трансформация ссылки */
+}
+.logo_a:hover:after, 
+.logo_a.active:after {
+    opacity: 1;
+    /* при наводе на ссылку появляется линия, через 1 сек
+    так же hover and after отвечают за навод */
+    /* так же .logo_a.active:after с клаом active ссылка будет все время изменена */
+
+}
+.logo_a.active {
+    color: gold;
+}
+ /* SLIDER */
+.slider {
+width: 100%;
+position: absolute;
+bottom: 0;
+left: 0;
+z-index: 1;
+ 
+}
+.slider_inner {
+    display: flex;
+    justify-content: space-between;
+    
+}
+ .slider_item {
+     width: 23%;
+     font-size: 18px;
+     color: #fff;
+     text-transform: uppercase;
+     /* all the big words */
+     padding: 15px 0;
+     /* отступ */
+  border-top: 2px solid #fff;
+  /* solid сплошная линия 
+  размер 24%*/
+  opacity: 0.7;
+
+  position: relative;
+  /* реальная позиция, (красная) часть полоски */
+ }
+.slider_num {
+    font-size: 24px;
+    font-weight: 700;
+    
+    
+}
+.slider_item.active {
+    opacity: 1;
+    
+}
+.slider_item.active:before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    position: absolute;
+    top: -2px;
+    /* положение красной полоски */
+    left: 0;
+    z-index: 1;
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    /* ecли ширина окна 1200  меньше будут выполнятся эьи настройки */
+    body {
+        background: rgba(43, 102, 175, 0.721);
+    }
+}
+
+
+
+/* #main {
+    background: url(img/178553.jpg);
+    background-position: top center;
+    background-attachment: fixed;
+    min-height: 900px;
+    position: relative;
+    background-size: cover;
+    -webkit-background-size: cover;
+} */
+ .about {
+     display: flex;
+     justify-content: space-between;
+     /* раздвигает блоки друх от друга */
+ }
+
+ .about_item {
+     /* width: 2%;
+     height: 4%; */
+ }
+ .about_item:hover .about_img img {
+   opacity: .7; 
+}
+ .about_img {
+     background:linear-gradient(to bottom, #000, #fff);
+     padding: 0px 8px 8px 0px;
+     margin-left: 35px;
+
+     
+ }
+
+.about_img img {
+    transition: opacity .1s linear;
+}
+.img1 {
+    width: 220px;
+    height: 170px;
+}
+.img2 {
+    width: 220px;
+    height: 170px;
+}
+.img3 {
+    width: 220px;
+    height: 170px;
+}

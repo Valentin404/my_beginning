@@ -1,0 +1,100 @@
+          
+body {             
+    margin : 0;             
+    padding : 10px;             
+    font-family: Verdana, Tahoma, arial, geneva, Helvetica, sans-serif;             
+    behavior: url(csshover.htc);             
+    background-color: #ffffff;             
+ }             
+              
+ /* Горизонтальное меню */             
+              
+ #menu {             
+    width: 100%; /* задаем ширину для div */             
+    float: left;  /* добавляем список в div */             
+    border-top: 1px  solid  #000000;  /* рисуем линию поверх div */             
+    border-bottom: 1px solid #000000; /* рисуем линию снизу div */             
+    font-size: 11px;  /* задаем размер шрифта */             
+    background: #2a52be;  /* фоновый цвет div */             
+    padding: 0 0 0 30px;  /* отступ ul от края контейнера */  
+  
+ }             
+ #menu ul {             
+    margin: 0px;             
+    padding: 0px;             
+ }             
+ * html #menu ul {             
+    float: left;  /* заставляет ul вместить все li */             
+    border-left: 1px solid #000000;  /* добавляет левую вертикальную черту к ul */             
+    margin-left: 15px;  /* IE удваивает заданное значение */             
+ }             
+ #menu li {             
+    float: left;   /* располагаем список по горизонтали */             
+    position: relative;  /* контекст позиционирования для раскрывающегося меню с абсолютным позиционированием */                
+    list-style-type: none;  /* удаляем маркеры */             
+    background: #2a52be;  /* задаем фоновый цвет элементов меню */             
+    border-right: 1px solid #000000;  /* создаем разделительные линии между элементами li */ 
+ }             
+ #menu li:first-child {             
+    border-left: 1px solid #000000;  /* первая вертикальная линия в меню */             
+ }             
+ #menu a {             
+    display: block;  /* пункты вложенного меню выделяются при наведении указателя */             
+    text-decoration: none;  /* удаляем подчеркивание ссылок */             
+    padding: 18px 10px 18px 10px;  /* создаем пространство с обеих сторон текста пункта меню */             
+        color:#ffffff;    /* задаем цвет шрифта */             
+ }             
+ #menu a:hover{             
+      color: #000000;       
+ }             
+ #menu li:hover {             
+    background: #eae404;  /* задает фон пунктов списка */
+       
+ }             
+              
+ /* Раскрывающееся меню */              
+              
+ #menu ul li ul {             
+    margin: 0px;             
+    position: absolute;  /* размещает выпадающий ul относительно родительского li */      
+     top:49px;   /* выравнивает раскрывающееся меню */
+    left: -1px;  /* выравнивает раскрывающееся меню */             
+    width: 10em; 
+     z-index:5;   
+ }              
+ #menu ul li ul li  {             
+    width: 100%;  /* элементы списка заполняют контейнер (ul) */             
+    border-left: 1px solid #000000;  /* три стороны каждого пункта раскрывающегося меню */             
+    border-bottom: 1px solid #000000;             
+    border-right: 1px solid #000000;             
+ }              
+ #menu ul li ul li:first-child {             
+    border-top: 1px solid #000000;  /* верхний край раскрывающегося меню */             
+ }             
+ body #menu ul li ul {             
+    display: none;             
+ }             
+ #menu ul li:hover ul, #menu ul li ul:hover {             
+    display: block;             
+ }             
+ * html #menu ul li ul {  /* добавляет верхнюю границу раскрывающегося меню для IE*/              
+    border-top: 1px solid #000000;              
+    border-left: 0рх;  /* устраняет наследование границ ul раскрывающимся меню */             
+ }             
+              
+ /* Многоуровневое раскрывающееся меню */              
+              
+ body #menu ul li ul li ul   {             
+    visibility: hidden;  /* идентично display: none */             
+    top: -1px;  /* выровнено по верхей границе пункта списка */             
+    left: 10em;              
+ }              
+ #menu ul li ul li:hover ul {             
+    visibility: visible;  /* идентично display: block */             
+ }             
+ #menu ul li ul li:hover ul li ul {             
+    visibility: hidden;             
+ }              
+ #menu ul li ul li ul li:hover ul {             
+    visibility: visible;             
+ }             

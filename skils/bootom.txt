@@ -1,0 +1,6 @@
+.cont__img {
+    min-height: calc(100vh - 100px);
+}
+footer {
+h 100 
+}

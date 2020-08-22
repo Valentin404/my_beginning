@@ -1,0 +1,154 @@
+.home__header {
+    margin-left: 12.5%;
+   margin-top: 173px;
+   width: 676px;
+}
+.home__title {
+    color: #ffffff;
+font-size: 40px;
+font-weight: 700;
+margin-top: -200px;
+margin-bottom: 19px;
+}
+.home__text {
+    color: #ffffff;
+font-size: 20px;
+font-weight: 400;
+line-height: 28px;
+width: 430px;
+margin-bottom: 46px;
+}
+.home__input {
+    display: flex;
+    width: 700px;
+    height: 100px;
+}
+
+
+.button {
+    width: 215px;
+    height: 65px;
+    background-color: #fe504f;
+    border-radius: 90px;
+    color: #ffffff;
+  font-size: 16px;
+font-weight: 400;
+padding-bottom: 1px;
+margin-right: 30px;
+}
+
+.button1 {
+    width: 215px;
+    height: 65px;
+    background-color: #343434;
+    border-radius: 90px;
+    color: #ffffff;
+  font-size: 16px;
+font-weight: 400;
+padding-bottom: 1px;
+}
+
+.text__buton {
+    margin-top: -5px;
+}
+.home__content {
+    margin-top: 50px;
+}
+.our__service {
+    text-align: center;
+    color: #343434;
+font-size: 24px;
+font-weight: 700;
+line-height: 28px;
+text-transform: uppercase;
+}
+.service__text {
+    text-align: center;
+    color: #adadad;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+padding: 0 12px;
+}
+.home__bloce {
+    margin-top: 67px;
+    display: flex;
+    justify-content: center;
+}
+.line {
+    margin-left: 39%;
+    margin-right: 39%;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+.our__service1 {
+    color: #343434;
+font-size: 16px;
+font-weight: 700;
+line-height: 24px;
+text-align: center;
+
+}
+.bloce__img {
+    width: 235px;
+    margin-right: 85px;
+}
+.bloce__img:last-child {
+    margin-right: 0;
+}
+.img__home {
+    margin-left: 37.5%;
+    margin-right: 37.5%;
+    margin-bottom: 17px;
+}
+.avtor__about {
+    background: url(../img/home/avtor.png) 0 0 / 100% 400px no-repeat;
+    height: 420px;
+   margin-top: 79px;
+    display: flex;
+    justify-content: center;
+}
+
+.avtor__title {
+    text-align: center;
+    color: #ffffff;
+font-family: Verdana;
+font-size: 34px;
+font-weight: 700;
+line-height: 58px;
+text-transform: uppercase;
+}
+.avtor__block {
+    display: flex;
+    justify-content: center;
+    margin-top: 9px;
+    margin-bottom: 18px;
+
+}
+.avtor__text {
+    margin:0  39px;
+    width: 224px;
+    color: #aeaeae;
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
+}
+.button2 {
+    width: 215px;
+    height: 65px;
+    background-color: #fe504f;
+    border-radius: 90px;
+    color: #ffffff;
+  font-size: 16px;
+font-weight: 400;
+padding-bottom: 1px;
+}
+.menu__play {
+    margin-left: 37%;
+    margin-right: 44%;
+    height: 80px;
+    width: 100%;
+    margin-top: 42px;
+    padding: 0 56px;
+}

@@ -1,0 +1,88 @@
+*{padding:0;margin:0;border:0;}
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+:focus,:active{outline:none;}
+a:focus,a:active{outline:none;}
+nav,footer,header,aside{display:block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display:none;}
+button{cursor:pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+ul li{list-style:none;}
+img{vertical-align:top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
+
+body {
+    /** фон */
+    /* ? background: url(img/3.jpg) 20px 2% / 100% 400px no-repeat fixed; */
+    /** 20px
+     Горизонталь
+      ** 2%
+    вертикаль 
+    /////////////
+    **100%
+    ширина по области боди
+    400px
+    высота
+    //////////////
+     ** container 
+    маштабируется так, что бы влезла самая меньшая часть
+    **cover
+    маштабируется так, что бы влезла самая большая часть
+    */
+
+
+
+
+
+    padding: 100px 30px;
+ 
+}
+.block {
+/* 
+    МУЛЬТИ
+
+    background: url(img/6.png) -12px 0 no-repeat, url(img/5.jpg) 50% / cover no-repeat; */
+    background:url(img/6.png) 50% / 100px no-repeat, url(img/2.jpg) left no-repeat, url(img/5.jpg) 50%/cover no-repeat;
+
+    height: 700px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #000;
+    /** Фон */
+    /* background: rgba(35, 71, 84, 0.8); */
+    /* background-color: rgba(35, 71, 84, 1); */
+
+    /** no-repeat */
+    /* Не повторятся */
+    /* * round 
+    заполняется так чо бы картинка полностью влезла и не вылазила, повторяется 
+    * space
+     заполняется так чо бы картинка полностью влезла и не вылазила, с отсупами при повторени*/
+    /** 20px
+     Горизонталь
+      ** 50%
+    вертикаль */
+    /*! or center (50% 50%) */
+    /* background: url(img/6.png) 20px 50% no-repeat; */
+
+    /* background-position: 0 0; Позиция фоно, как отдельным свойством */
+
+    /** fixed 
+    картинка будет на одной позиции, пи скруле будет оставатся на месте, пропадать */
+    /* background: url(img/6.png) 20px 50px no-repeat fixed; */
+
+    /*! Пропорцеонально и адаптивно растягивается по все доступной области */
+    /* background: url(img/5.jpg) 50% / cover  no-repeat; */
+
+
+}
+/* Иконки */
+.list li{
+font-family: 'Courier New', Courier, monospace;
+margin-bottom: 15px;
+font-size: 24px;
+background: url(img/6.png) left top /20px 20px no-repeat;
+padding-left: 30px;
+}

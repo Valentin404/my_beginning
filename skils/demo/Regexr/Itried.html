@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // new RegExp - вписанный конструктор
+        // ? const reg = new RegExp('шаблон', 'флаги')
+        // ? const reg = new RegExp(`шаблон ${1+2} шаблон`, `флаги`)
+        // ? const reg = new RegExp(`шаблон\\шаблон`, `флаги`)
+ 
+        // ? const regexp =  /шаблон/флаги
+        // ? const regexp =  /шаблон\/шаблон/флаги
+
+/////////////////////////////////////
+
+
+        // const regexp = /Валентин/
+        const str = 'Привет, меня зовут Валентин. Мне 22 года';
+    
+
+        // const result = str.match(regexp)
+        // console.log(result)
+
+        //match помогает находить совпадения в тексте
+        // const regexp = /Валентин./
+        // . -это любой символ кроме переноса строки 
+
+        
+        // const regexp = /Валентин\./ - так оно ищет именно точку
+
+
+// let pattern = /\w+/g,
+// string = "How are,   you? I'm fine. it        seems too easy"
+// console.log(string.match(pattern));   
+// //(10) ["How", "are", "you", "I", "m", "fine", "it", "seems", "too", "easy"]
+
+
+// // split - убирает пробелы и разделители, возращает масив 
+// console.log(string.split(/[\s,]+/));
+// // (9) ["How", "are", "you?", "I'm", "fine.", "it", "seems", "too", "easy"]
+
+// let string = "How are you? I'm fine. it  {{OnlyEnglish}}     seems too easy";
+
+
+// console.log(string.replace(/\{\{\w*}\}/g, "Some string")) // Замена слитых строк на Some..
+
+// console.log(string.replace(/\{\{(\w*)}\}/g, "$1")) //Убрать фигурные скобки
+
+// let string = "How are you? {{name}}. I'm fine. {{title}}   seems too easy";
+
+// let obj = {
+//     name: "Sorax",
+//     title: "JavaScript",
+//     resouse: "YouTube"
+// }
+
+// console.log(string.replace(/\{\{(\w*)}\}/g, function(match, value){
+//     return obj[value];
+// }))
+
+// let string = "How are you? {{name}}. I'm fine. {{title}}  test@test.com seems too easy";
+// let email = /\w+@\w+\.\w+/
+// console.log(email.test(string)) // true // Так как в тексте есть email
+
+////////////////////////////////////////
+///прогоняет через масив весь текст, возращая слово первое словою
+// но при каждом повторном прогонне удаляется первое слово
+// убирая пробелы , ? ! {} и тд. Таким образом получается так
+// How(Index: 0)
+// are(Index: 4)
+// you(Index: 8)
+// name(Index: 15)
+// I(Index: 23)
+// m(Index: 25)
+// fine(Index: 27)
+// title(Index: 35)
+// test(Index: 44)
+// test(Index: 49)
+// com(Index: 54)
+// seems(Index: 58)
+// too(Index: 64)
+// easy(Index: 68)
+
+// let string = "How are you? {{name}}. I'm fine. {{title}}  test@test.com seems too easy";
+// let global = /\w+/g
+// let match;
+
+// while (match = global.exec(string)) {
+//     console.log(match[0] + "(Index: " + match.index + ")")
+// }
+/////////////////////////////
+
+let a = "fafa sada d d fa sfa sdad valik fsdfas "
+console.log(a.match('valik'))
+
+    </script>
+</body>
+</html>

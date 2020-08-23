@@ -1,0 +1,168 @@
+
+
+    let letar = 0;
+    let bletar = 0;
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector("#select__cart").onclick = function() {
+            letar = document.querySelector("#select__cart").value;
+          return letar;
+        };
+        document.querySelector("#select__price").onclick = function() {
+            bletar = document.querySelector("#select__price").value;
+             return bletar;
+           };
+          
+      });
+   
+let timerId= setInterval(() => 
+root()
+, 800);
+
+function root() {
+    add()
+    if(bletar == 30) {
+        for (let i = 0; i < products.children.length ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-price') > 30) {
+                products.children[j].style.display ='none';
+             
+            }}}
+    }
+    if(letar == 1 && bletar == 30) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 1 && +products.children[j].getAttribute('data-price') > 30) {
+                products.children[j].style.display ='none';
+            }}}
+    }
+    if(letar == 1) {
+        for (let i = 0; i < products.children.length ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 1) {
+                products.children[j].style.display ='none';
+             
+            }}}
+    }
+    if(letar == 0 && bletar == 0) {
+add()
+    }
+    if(letar == 1 && bletar == 50) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 1 && +products.children[j].getAttribute('data-price') > 50) {
+                products.children[j].style.display ='none';
+            }}}
+    }
+    if(letar == 1 && bletar == 100) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 1 && +products.children[j].getAttribute('data-price') > 100) {
+                products.children[j].style.display ='none';
+            }}}
+    }
+    if(letar == 1 && bletar == 150) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 1 && +products.children[j].getAttribute('data-price') > 150) {
+                products.children[j].style.display ='none'; 
+            }}}
+    }
+    if(bletar == 50) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if( +products.children[j].getAttribute('data-price') > 50) {
+                products.children[j].style.display ='none';
+            }}}
+    }
+    if(bletar == 100) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if( +products.children[j].getAttribute('data-price') > 100) {
+                products.children[j].style.display ='none';
+            }}}
+    }
+    if(bletar == 150) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if( +products.children[j].getAttribute('data-price') > 150) {
+                products.children[j].style.display ='none';
+            }}}
+    }
+    if(letar == 1 && bletar == 150) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 1 && +products.children[j].getAttribute('data-price') > 150) {
+                products.children[j].style.display ='none';
+            }}}
+    }
+    if(letar == 2 && bletar == 30) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 2 && +products.children[j].getAttribute('data-price') > 30) {
+                products.children[j].style.display ='none';
+            }}}
+    }
+    if(letar == 2 && bletar == 50) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 2 && +products.children[j].getAttribute('data-price') > 50) {
+                products.children[j].style.display ='none';
+            }}}
+    }
+    if(letar == 2 && bletar == 100) {
+        for (let i = 0; i < products.children.length  ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 2 && +products.children[j].getAttribute('data-price') > 100) {
+                products.children[j].style.display ='none';   
+            }}}
+    }
+    if(letar == 2 && bletar == 150) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 2 && +products.children[j].getAttribute('data-price') > 150) {
+                products.children[j].style.display ='none';   
+            }}}
+    }
+    if(letar == 3 && bletar == 30) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 3 && +products.children[j].getAttribute('data-price') > 30) {
+                products.children[j].style.display ='none';   
+            }}}
+    }
+    if(letar == 3 && bletar == 50) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 3 && +products.children[j].getAttribute('data-price') > 50) {
+                products.children[j].style.display ='none';   
+            }}}
+    }
+    if(letar == 3 && bletar == 100) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 3 && +products.children[j].getAttribute('data-price') > 100) {
+                products.children[j].style.display ='none';   
+            }}}
+    }
+    if(letar == 3 && bletar == 150) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if( +products.children[j].getAttribute('data-cart') > 3 || +products.children[j].getAttribute('data-cart') < 3 && +products.children[j].getAttribute('data-price') > 150) {
+                products.children[j].style.display ='none';   
+            }}}
+    }
+    if(letar == 3) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 3 || +products.children[j].getAttribute('data-cart') < 3) {
+                products.children[j].style.display ='none';   
+            }}}
+    }
+    if(letar == 2) {
+        for (let i = 0; i < products.children.length +1 ; i++) {
+            for (let j = i; j < products.children.length; j++) {
+    if(+products.children[j].getAttribute('data-cart') > 2 || +products.children[j].getAttribute('data-cart') < 2) {
+                products.children[j].style.display ='none';   
+            }}}
+    }
+}

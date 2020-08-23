@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        ul{
+
+        }
+        li{
+           list-style-type: none;
+           display: flex;
+           justify-content: space-between;
+        }
+        .filter{
+            display: flex;
+        }
+        .active{
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<input type="text"  id="title"></input><button id="add" >Click</button>
+<div class="filter"><ul id="listActive"></ul> <ul id="listPassive"></ul></div>
+
+<input type="text" id="search">
+<ul id="results">
+</ul>
+
+    <script>
+        const add = document.getElementById('add');
+        const title = document.getElementById('title');
+        const listActive =document.getElementById('listActive');
+        const listPassive =document.getElementById('listPassive');
+        const filter = document.getElementsByClassName('filter');
+
+        let arr = [
+  { value: "Pants", id: '', packed: false, filter: false},
+  { value: "Jacket", id: '', packed: false, filter: false},
+  { value: "iPhone Charger", id:'', packed: false, filter: false},
+  { value: "MacBook", id:'', packed: false, filter: false},
+  { value: "Sleeping Pills", id:'', packed: true, filter: false},
+  { value: "Underwear", id:'', packed: false, filter: false},
+  { value: "Hat", id:'', packed: false, filter: false},
+  { value: "T-Shirts", id:'', packed: false, filter: false},
+  { value: "Belt", id:'', packed: false, filter: false},
+  { value: "Passport", id:'', packed: true, filter: false},
+  { value: "Sandwich", id:'', packed: true, filter: false}
+];
+
+
+    
+function click() {
+     let text = title.value.replace(/ +/g, ' ').trim()
+    if(text === '') {
+        title.style.boxShadow = '0px 2px red'
+        title.value = ''
+        title.placeholder = 'Это поле не может быть пустым'
+    } else {
+        title.style.boxShadow = null
+   arr.push({value: title.value, id: '', packed: false, filter: false})
+   title.value = '';
+   title.placeholder = ''
+   paint()
+    }
+}
+let list =[]
+function filterText(val){
+// console.log(resultall)
+    // arr.map((item) =>{
+    //     list.push(item.value)
+    // })
+    console.log(list.filter(i=>(~i.indexOf(val))))
+// console.log(list)
+return list.filter(i=>(~i.indexOf(val)))
+  
+// paint()
+
+        }
+function paint() {
+ 
+    listActive.innerHTML =`<input type="text"  id="filterTextActive" oninput="filterText(this.value)"></input>`;
+    listPassive.innerHTML =`<input type="text"  id="filterTextPasive" oninput="filterText(this.value)"></input>`;
+    // if(list.length == arr.length || list.length == 0) {list = []}   
+    list = []
+    // console.log(list)
+    arr.map((item, index)=> {
+        list[index] = item.value
+        if(item.packed) {
+            listActive.innerHTML += `<li class='active' id=${item.id=index}><input type="checkbox" onclick="boolPacked(${index})" checked='checked'}>
+            </input>${list[index]}<button onclick="removeLI(${index})">X</button></li>`
+        }else  {
+            listPassive.innerHTML += `<li class='passive' id=${index=index}><input type="checkbox" onclick="boolPacked(${index})" >
+            </input>${list[index]}<button id="delitLI" onclick="removeLI(${index})">X</button></li>`
+        }  
+    })
+  
+}
+paint()
+add.addEventListener('click', click, false);
+
+function boolPacked(index) {
+arr[index].packed = !arr[index].packed
+paint()
+}
+
+function removeLI(itemID){
+   arr.splice(itemID,1)
+    paint()
+}
+window.addEventListener ("keypress", function (e) {
+            if (e.keyCode !== 13) return;
+            click()
+        });
+
+
+
+
+
+
+
+const result = document.getElementById('results')
+renderList(list,result)
+function filters(val,list){
+
+// console.log(list)
+return list.filter(i=>(~i.indexOf(val)))
+
+};
+function renderList(_list=[],el=document.body){
+	el.innerHTML='';
+  _list.forEach(i=>{
+    let new_el = document.createElement('li')
+    new_el.innerHTML=i
+    el.appendChild(new_el)
+  })
+//   console.timeEnd('test')
+}
+document.getElementById('search').addEventListener('input',e=>renderList(filters(e.target.value,list),result))
+    </script>
+</body>
+</html>

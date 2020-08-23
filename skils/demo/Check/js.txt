@@ -1,0 +1,14 @@
+
+const order__name = document.querySelector('#order__name');
+const order__email = document.querySelector('#order__email');
+const order__button = document.querySelector('#order__button');
+
+order__button.onclick = function() {
+    let n = order__name.value.replace(/ +/g, ' ').trim();
+    let e = order__email.value.replace(/ +/g, ' ').trim();
+    // str = str.replace(/\s+/g, '');
+    if (n == '' || e == '') {
+        alert('Пожалуйста заполните все поля')
+    }
+
+}

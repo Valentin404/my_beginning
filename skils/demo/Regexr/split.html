@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let text = 'Some text\nAnd some more\r\nAnd yet\rThis is the end'
+let lines = text.split(/\r\n|\r|\n/)
+console.log(lines) // logs [ 'Some text', 'And some more', 'And yet', 'This is the end' ]
+    </script>
+</body>
+</html>

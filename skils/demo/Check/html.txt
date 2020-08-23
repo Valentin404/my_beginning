@@ -1,0 +1,9 @@
+  <div class="conteiner__order">
+                        <div class="order__name">
+                            <input type="text" id="order__name" placeholder="Ваше имя">
+                        </div>
+                        <div class="order__email">
+                            <input type="text" id="order__email" placeholder="Email">
+                        </div>
+                        <button id="order__button">Отправить</button>
+                    </div>

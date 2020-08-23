@@ -1,0 +1,10 @@
+const button = document.querySelector('.btn-check');
+button.onclick = function () {
+  document.querySelector('.conteiner__order').classList.toggle('order');
+}
+
+const toggleClass= ()=> {
+  // text.classList=='newClass'? text.classList.remove('newClass') : text.classList.add('newClass')
+text.getAttribute('class')=='newClass'?((()=>{text.setAttribute('class', ''); button.innerHTML= text.textContent})() ) :text.setAttribute('class', 'newClass')
+
+}
